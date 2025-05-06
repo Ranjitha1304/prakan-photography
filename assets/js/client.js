@@ -2,17 +2,17 @@ const testimonials = [
     {
       name: 'Anjali & Karthik',
       img: '/assets/images/client1.png',
-      msg: 'Absolutely loved our photos! The team at Prakan Photo Studio captured our special day perfectly. Every Moment was Beautifully Framed. Thank You For The Amazing Memories.'
+      msg: 'Absolutely loved our photos! The team at Prakan Photo Studio captured our special day perfectly. '
     },
     {
       name: 'Suresh M.',
       img: '/assets/images/client2.png',
-      msg: 'Professional, friendly, and creative! I Had a Portrait Session And The Results Were Beyond Expectations. The editing was subtle and natural, And The Staff Made Me Feel So Comfortable. Highly Recommended!'
+      msg: 'Professional, friendly, and creative! I Had a Portrait Session And The Results Were Beyond Expectations. '
     },
     {
       name: 'Divya R.',
       img: '/assets/images/client3.png',
-      msg: 'The best photo studio experience ever! From The First Consultation To The Final Album Delivery, Everything was smooth. Their Attention To Detail And Passion For Photography Really Shows.'
+      msg: 'The best photo studio experience ever! From The First Consultation To The Final Album Delivery. .'
     },
     {
       name: 'Meera & Arjun',
@@ -22,27 +22,27 @@ const testimonials = [
     {
       name: 'Ravi K.',
       img: '/assets/images/client2.png',
-      msg: 'Best decision to hire them! Their eye for detail is unmatched.'
+      msg: 'Best decision to hire them! Their eye for detail is unmatched. Highly Recommended!'
     },
     {
       name: 'Sneha L.',
       img: '/assets/images/client3.png',
-      msg: 'We were blown away by the pictures. Every emotion captured beautifully!'
+      msg: 'We were blown away by the pictures. Every emotion captured beautifully!  Everything was smooth'
     },
     {
       name: 'Nithya G.',
       img: '/assets/images/client1.png',
-      msg: 'A talented and passionate team. Great post-production work too!'
+      msg: 'A talented and passionate team. Great post-production work too! Their Attention To Detail And Passion For Photography Really Shows'
     },
     {
       name: 'Deekshitha & Sekar',
       img: '/assets/images/client2.png',
-      msg: 'They made the entire shoot fun and natural. 10/10 experience.'
+      msg: 'Professional, friendly, and creative! I Had a Portrait Session And The Results Were Beyond Expectations. '
     },
     {
       name: 'Reena Joseph',
       img: '/assets/images/client3.png',
-      msg: 'Highly creative and professional! Loved our album and trailer video!'
+      msg: 'The best photo studio experience ever! From The First Consultation To The Final Album Delivery.'
     }
   ];
 
