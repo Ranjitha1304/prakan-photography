@@ -1,0 +1,47 @@
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.section-title {
+  font-weight: 600;
+  font-size: 28px;
+  margin-bottom: 40px;
+  text-align: center;
+  margin-top: 200px;
+
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+.video-wrapper iframe,
+.video-wrapper video {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.video-text {
+  position: absolute;
+  bottom: 90px;
+  left: 70px;
+  color: white;
+  font-weight: 600;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+}
+
+.video-grid .col-md-6 {
+  margin-bottom: 30px;
+}
+.portrait {
+    width: 50%;
+    height: 96%;
+}

@@ -1,0 +1,55 @@
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+.contact-section {
+  padding: 40px;
+  max-width: 1000px;
+  margin: 50px auto;
+  border-radius: 5px;
+  margin-top: 90px;
+}
+.contact-section h5 {
+    font-weight: 600;  
+}
+.form-control {
+  border: 1px solid #e93a9d;
+  border-radius: 0;
+}
+label {
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+.form-title {
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.intro-text {
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  color: #333;
+  font-weight: 600;
+
+}
+.submit-btn {
+  background-color: #e93a9d;
+  color: white;
+  border: none;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 600;
+
+}
+.submit-btn:hover {
+  background-color: #d81b60;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+.contact-section {
+  margin-top: 0px;
+}
+}

@@ -1,0 +1,92 @@
+
+/* Custom Modal Styles */
+.custom-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-modal-content {
+  background: white;
+  padding: 20px;
+  margin-top: 70px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  animation: modalFadeIn 0.3s;
+  border: 2px solid rgb(238, 195, 41);
+
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.custom-modal-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-btn {
+  background: none;
+  /* border: none; */
+  border: 2px solid #E93A9D;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.form-control:focus {
+        border-color: #e91e63;
+        box-shadow: 0 0 0 0.25rem rgba(233, 30, 99, 0.25);
+      }
+      /* .form-check-input:checked {
+        background-color: #e91e63;
+        border-color: #e91e63;
+      } */
+
+      .form-control {
+        border: 2px solid #E93A9D;
+        padding-top:20px; 
+        padding-bottom: 20px;
+      }
+
+      a.forget  {
+  text-decoration: none;
+  color:black;
+}
+
+button.login-btn-submit  {
+color:white;
+background-color: #E93A9D;
+font-weight: 600;
+font-size: 22px;
+}
+
+.login-btn-submit:hover {
+        background-color: #d81b60;
+        color:white;
+      }
+.no-account {
+  font-size: 20px;
+  font-weight: 500;
+}
+.register-now {
+        color: #E93A9D;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 20px;
+
+      }
+
+.form-check-input {
+  border-color: #E93A9D;
+
+}

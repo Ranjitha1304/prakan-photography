@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prakan Photography</title>
+
+    <!-- Favicon (logo) -->
+    <link rel="icon" type="image/png" href="./assets/images/logo.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/login.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top fixed-top-custom">
+        <div class="container position-relative">
+            <!-- Logo -->
+            <a class="navbar-brand" href="./index.html">
+                <img src="./assets/images/logo.png" alt="Logo" >
+            </a>
+
+      <button class="navbar-toggler" onclick="toggleNavbar()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+
+            <!-- Centered Menu -->
+            <div class="navbar-collapse-custom justify-content-center" id="navbarContent">
+              <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./wedding.html">WEDDINGS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./kids.html">KIDS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./photography.html">PHOTOGRAPHY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./package.html">PACKAGES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contactUs.html">CONTACT US</a>
+                    </li>
+                </ul>
+                        <!-- Mobile Login Button -->
+        <div class="d-block d-lg-none mt-3 w-100 text-center">
+          <button class="btn btn-primary w-100" onclick="openModal('loginModal')">LOGIN</button>
+        </div>
+            </div>
+
+             <!-- Desktop Login Button -->
+      <div class="ms-auto d-none d-lg-block">
+        <button class="btn btn-primary login-btn" onclick="openModal('loginModal')">LOGIN</button>
+      </div>
+            </div>
+        
+    </nav>
+
+
+
+<!-- Login Modal -->
+<div id="loginModal" class="custom-modal">
+  <div class="custom-modal-content">
+    <div class="custom-modal-header">
+      <button type="button" class="close-btn" onclick="closeModal('loginModal')">&times;</button>
+    </div>
+    <h4 class="text-center fw-bold">Login into your Account</h4>
+    <form id="loginForm" class="mt-3">
+      <input type="text" id="loginEmailPhone" class="form-control mb-3" placeholder="Email or phone" required>
+      <input type="password" id="loginPassword" class="form-control mb-2" placeholder="Password" required>
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="rememberMe">
+          <label class="form-check-label" for="rememberMe">Remember me</label>
+        </div>
+        <a href="#" class="forget">Forget Password?</a>
+      </div>
+      <button type="submit" class="btn login-btn-submit w-100">Login</button>
+    </form>
+    <div class="text-center mt-3">
+      <p class="mb-0 no-account">Don't have an account?</p>
+      <span class="register-now" onclick="switchToRegister()">Register Now</span>
+    </div>
+  </div>
+</div>
+
+<!-- Register Modal -->
+<div id="registerModal" class="custom-modal">
+  <div class="custom-modal-content">
+    <div class="custom-modal-header">
+      <button type="button" class="close-btn" onclick="closeModal('registerModal')">&times;</button>
+    </div>
+    <h4 class="text-center fw-bold">Register New Account</h4>
+    <form id="registerForm" class="mt-3">
+      <input type="text" id="regName" class="form-control mb-3" placeholder="Full Name" required>
+      <input type="email" id="regEmail" class="form-control mb-3" placeholder="Email" required>
+      <input type="tel" id="regPhone" class="form-control mb-3" placeholder="Phone" required>
+      <input type="password" id="regPassword" class="form-control mb-3" placeholder="Password" required>
+      <button type="submit" class="btn login-btn-submit w-100">Register</button>
+    </form>
+  </div>
+</div>
+
+<!-- Success Message Modal -->
+<div id="successModal" class="custom-modal">
+  <div class="custom-modal-content text-center p-4">
+    <img src="https://cdn-icons-png.flaticon.com/512/845/845646.png" alt="Success" width="80" />
+    <h5 class="mt-3">Login Successful!</h5>
+  </div>
+</div>
+
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <!-- Banner Image -->
+        <div class="text-center">
+            <img src="./assets/images/banner.png" class="img-fluid rounded" alt="Banner">
+        </div>
+
+        <!-- Image Left - Text Right Section -->
+        <div class="image-text-section container mt-5">
+            <!-- Left Image -->
+            <img src="./assets/images/home1.png" alt="Small">
+
+            <!-- Right Text -->
+            <div class="text-content-main">
+                <h5>Welcome to Prakan Photo Studio</h5>
+                <h6><strong>Moments Fade, Memories Stay – We Make Them Timeless.</strong></h6>
+                <p>At Prakan Photo Studio, photography is not just our profession – it’s our passion. With years of experience in capturing life’s most precious events, we have grown into one of the most trusted photography studios in the region. We believe that every photo tells a story. Whether it's the joyous laughter at a wedding, the sparkle in a child's eyes, or a couple's quiet moment of love, we capture emotions that last forever. Our approach is a perfect blend of candid creativity and professional precision. We are a passionate team of photographers dedicated to capturing life's most beautiful moments. Whether it's a wedding, birthday, maternity, or portrait shoot, we bring your vision to life with high-quality photography and personalised service. </p>
+            </div>
+        </div>
+
+    </div>
+
+
+<!-- Latest Photoshoot Section -->
+<section class="latest-photoshoot">
+    <h2>LATEST PHOTOSHOOT</h2>
+    <div class="photos-grid">
+        <img src="./assets/images/pshoot1.png" alt="Photoshoot 1">
+        <img src="./assets/images/pshoot2.png" alt="Photoshoot 2">
+        <img src="./assets/images/pshoot3.png" alt="Photoshoot 3">
+        <img src="./assets/images/pshoot5.png" alt="Photoshoot 4">
+        <img src="./assets/images/pshoot4.png" alt="Photoshoot 5">
+    </div>
+</section>
+
+<!-- Candid Videos Section -->
+<section class="candid-videos">
+    <div class="candid-content">
+        <div class="text-content">
+            <h3>Candid Videos</h3>
+            <h2>Capturing the Authentic You</h2>
+            <p>These unscripted moments capture the raw emotions, genuine interactions, and spontaneous joy of your wedding day. Candid videos offer a window into the true essence of your celebration, allowing you to relive the laughter, tears, and love that unfolded in real time.</p>
+            <a href="./videos.html" class="browse-videos">BROWSE MORE VIDEOS</a>
+        </div>
+        <div class="video-content">
+            <video controls>
+                <source src="./assets/videos/samplevid1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <!-- Our Great Services Section -->
+    <div class="great-services">
+        <h4>EASE AND SIMPLE</h4>
+        <h2>OUR GREAT SERVICES</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <img src="./assets/images/camera.png" alt="Wedding Photoshoot Icon" class="service-icon">
+                <h3>WEDDING PHOTOSHOOT</h3>
+                <p>Your wedding day is about your love, not about perfect pictures. Let us capture its essence with our unconventional photography.</p>
+            </div>
+            <div class="service-item">
+                <img src= "./assets/images/heart-outline.png" alt="Fine Retouching Icon" class="service-icon">
+                <h3>FINE RETOUCHING</h3>
+                <p>We masterfully enhance the details of your photographs, achieving a polished & professional look while preserving their authentic essence & natural beauty.</p>
+            </div>
+            <div class="service-item">
+                <img src="./assets/images/outlinephoto.png" alt="Photo Editing Icon" class="service-icon">
+                <h3>PHOTO EDITING</h3>
+                <p>Our photo editing artistry transforms raw images into captivating visual stories, each pixel infused with your unique blend of technical mastery & artistic expression.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="special-offer-section">
+    <div class="special-offer-header">
+      <!-- <h2>SPECIAL <br> OFFER</h2> -->
+      <img src="./assets/images/special offer.png" alt="Gift" class="gift-image">
+    </div>
+  
+    <div class="offer-container">
+      <div class="offer-left">
+        <h3>PHOTO PRINT</h3>
+        <p>IMAGINATIONS BECOME TRUE</p>
+        <div class="kid-wrapper">
+        <div class="kid-image-wrapper">
+          <img src="./assets/images/special1.png" alt="Kid Photo">
+        </div>
+        <div class="discount-text">
+          <span class="big">40%</span><br>
+          <span class="small">OFF</span>
+        </div>
+    </div>
+      </div>
+  
+      <div class="offer-right" style="background-image: url('./assets/images/background.png');">
+        <div class="right-content">
+          <img src="./assets/images/special2.png" alt="Couple" class="couple-image">
+          <div class="right-text">
+            <h2>60% <br> OFF</h2>
+            <p>For Limited <br> Time Period</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+<!-- Client Section -->
+
+
+  <!-- Testimonials -->
+  <div class="text-center mt-5">
+    <h2><strong>WHAT OUR HAPPY CLIENTS SAY</strong></h2>
+    <div id="testimonialGroup" class="testimonial-container"></div>
+    <div class="testimonial-dots">
+      <span class="dot active" onclick="showTestimonials(0)"></span>
+      <span class="dot" onclick="showTestimonials(1)"></span>
+      <span class="dot" onclick="showTestimonials(2)"></span>
+    </div>
+  </div>
+
+  <!-- FAQ Section -->
+  <div class="faq-section">
+    <h2 class="text-center"><strong>FAQ's</strong></h2>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFAQ(this)">
+        <span class="faq-icon" style="font-size: 16px; margin-right: 10px;">▼</span>
+        <span>What Is Your Photography Style?</span>
+      </button>
+      <div class="faq-answer">
+        Throughout the years, we have created our distinctive aesthetic that can be characterized as a fusion of photojournalistic, contemporary, fine art, and candid wedding photography. We considered how to effectively express your tale using our artist perspective based on the circumstance and the atmosphere. we capture casual photos as well as some stunning staged shots of the newly weds on their big day and their close relatives to give viewers a complete picture of the wedding celebrations.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFAQ(this)">
+        <span class="faq-icon" style="font-size: 16px; margin-right: 10px;">▼</span>
+        <span>Do You Offer Wedding Cinematography?</span>
+      </button>
+      <div class="faq-answer">
+        Yeah, we also provide wedding cinematography services. Also, our clients and fans seem to like our wedding films, as we have a dedicated video editing team that will make your wedding videos look cinematic, with good production value.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFAQ(this)">
+        <span class="faq-icon" style="font-size: 16px; margin-right: 10px;">▼</span>
+        <span>What Do You Cover In Wedding Photography?</span>
+      </button>
+      <div class="faq-answer">
+        From the moment the brideand grrom are getting dressed until the wedding celebrations are done, we capture them. For instance, at a wedding, this would include pictures of the bride and groom getting ready, their individual and couple portraits, pictures of their close family members, picture of the guests who actively participate in the wedding, and pictures of all the ceremonies and rituals taken in creative close-ups and documentary wide angle. Morevoer, we will take into account any specific photos the customer needs, and we will make every effort to obtain them all. Yet while planning a wedding, One must also take into account any unforeseen circumstances.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFAQ(this)">
+        <span class="faq-icon" style="font-size: 16px; margin-right: 10px;">▼</span>
+        <span>How Early Should We Book?</span>
+      </button>
+      <div class="faq-answer">
+        We typically begin booking dates six months in advance. For planning considerartions. early booking is encouraged. It's always important to double check our availability because we can open even up to a week before your wedding.
+    </div>
+  </div>
+</div>
+
+  
+<!-- GLIMPSE SECTION -->
+<section class="py-5 text-center">
+    <h2 class="glimpse-title">GLIMPSE OF OUR WORK</h2>
+    <div class="container mt-4">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-md-3 glimpse-img-container">
+          <img src="./assets/images/glimpse1.png" class="img-fluid glimpse-img" alt="Work 1">
+        </div>
+        <div class="col-md-3 glimpse-img-container center-img">
+          <img src="./assets/images/glimpse2.png" class="img-fluid glimpse-img" alt="Work 2">
+        </div>
+        <div class="col-md-3 glimpse-img-container">
+          <img src="./assets/images/glimpse3.png" class="img-fluid glimpse-img" alt="Work 3">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FOOTER SECTION -->
+  <footer class="footer text-white py-5">
+    <div class="container-fluid">
+      <div class="row text-center text-md-start footer-content">
+        <div class="col-md-4 mb-4 mb-md-0">
+          <img src="./assets/images/logo.png" alt="Logo" class="footer-logo mb-2">
+          <h5 class="fw-bold">PRAKAN STUDIO <br>PHOTOGRAPHY</h5>
+        </div>
+        <div class="col-md-4 mb-4 mb-md-0">
+          <h5 class="fw-bold">QUICK LINKS</h5>
+          <ul class="list-unstyled" style="font-weight: 600;">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./package.html">About Us</a></li>
+            <li><a href="./privacy.html">Privacy Policy</a></li>
+            <li><a href="./terms_conditions.html">Terms and Conditions</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5 class="fw-bold">CONTACT</h5>
+          <ul class="list-unstyled" style="font-weight: 600;"> 
+            <li><i class="bi bi-telephone-fill"></i> 9874653210 / 9632587410</li>
+            <li><i class="bi bi-envelope-fill"></i> mailtoprakan@studio.com</li>
+            <li><i class="bi bi-geo-alt-fill"></i> Guduvancherry, 603202</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/client.js"></script>
+    <script src="./assets/js/login.js"></script>
+    <script src="./assets/js/toggle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>

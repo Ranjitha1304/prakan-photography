@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prakan Photography</title>
+
+    <!-- Favicon (logo) -->
+    <link rel="icon" type="image/png" href="./assets/images/logo.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/login.css">
+    <link rel="stylesheet" href="./assets/css/videos.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top fixed-top-custom">
+        <div class="container position-relative">
+            <!-- Logo -->
+            <a class="navbar-brand" href="./index.html">
+                <img src="./assets/images/logo.png" alt="Logo" >
+            </a>
+
+      <button class="navbar-toggler" onclick="toggleNavbar()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+
+            <!-- Centered Menu -->
+            <div class="navbar-collapse-custom justify-content-center" id="navbarContent">
+              <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./wedding.html">WEDDINGS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./kids.html">KIDS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./photography.html">PHOTOGRAPHY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./package.html">PACKAGES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contactUs.html">CONTACT US</a>
+                    </li>
+                </ul>
+                        <!-- Mobile Login Button -->
+        <div class="d-block d-lg-none mt-3 w-100 text-center">
+          <button class="btn btn-primary w-100" onclick="openModal('loginModal')">LOGIN</button>
+        </div>
+            </div>
+
+             <!-- Desktop Login Button -->
+      <div class="ms-auto d-none d-lg-block">
+        <button class="btn btn-primary login-btn" onclick="openModal('loginModal')">LOGIN</button>
+      </div>
+            </div>
+        
+    </nav>
+
+
+
+<!-- Login Modal -->
+<div id="loginModal" class="custom-modal">
+  <div class="custom-modal-content">
+    <div class="custom-modal-header">
+      <button type="button" class="close-btn" onclick="closeModal('loginModal')">&times;</button>
+    </div>
+    <h4 class="text-center fw-bold">Login into your Account</h4>
+    <form id="loginForm" class="mt-3">
+      <input type="text" id="loginEmailPhone" class="form-control mb-3" placeholder="Email or phone" required>
+      <input type="password" id="loginPassword" class="form-control mb-2" placeholder="Password" required>
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="rememberMe">
+          <label class="form-check-label" for="rememberMe">Remember me</label>
+        </div>
+        <a href="#" class="forget">Forget Password?</a>
+      </div>
+      <button type="submit" class="btn login-btn-submit w-100">Login</button>
+    </form>
+    <div class="text-center mt-3">
+      <p class="mb-0 no-account">Don't have an account?</p>
+      <span class="register-now" onclick="switchToRegister()">Register Now</span>
+    </div>
+  </div>
+</div>
+
+<!-- Register Modal -->
+<div id="registerModal" class="custom-modal">
+  <div class="custom-modal-content">
+    <div class="custom-modal-header">
+      <button type="button" class="close-btn" onclick="closeModal('registerModal')">&times;</button>
+    </div>
+    <h4 class="text-center fw-bold">Register New Account</h4>
+    <form id="registerForm" class="mt-3">
+      <input type="text" id="regName" class="form-control mb-3" placeholder="Full Name" required>
+      <input type="email" id="regEmail" class="form-control mb-3" placeholder="Email" required>
+      <input type="tel" id="regPhone" class="form-control mb-3" placeholder="Phone" required>
+      <input type="password" id="regPassword" class="form-control mb-3" placeholder="Password" required>
+      <button type="submit" class="btn login-btn-submit w-100">Register</button>
+    </form>
+  </div>
+</div>
+
+<!-- Success Message Modal -->
+<div id="successModal" class="custom-modal">
+  <div class="custom-modal-content text-center p-4">
+    <img src="https://cdn-icons-png.flaticon.com/512/845/845646.png" alt="Success" width="80" />
+    <h5 class="mt-3">Login Successful!</h5>
+  </div>
+</div>
+
+
+  <!-- Section 1 -->
+  <div class="container my-5 candid">
+    <h2 class="section-title">Candid Wedding Film</h2>
+    <div class="row">
+        <div class="col-lg-7 mb-4"> 
+        <h5><strong>Real Emotions. Unscripted Moments. Everlasting Memories.</strong></h5>
+        <p>
+          At Prakan Photo Studio, Our Candid Video Service Is All About Capturing The Raw, Natural Moments That Truly Define Your Special Day. From Laughter And Happy Tears To Unexpected Hugs And Joyful Glances — We Film The Emotions As They Happen, Without Poses Or Retakes.
+        </p>
+        <h6><strong>What You Get</strong></h6>
+        <ul>
+          <li>Full HD / 4K Quality Videos</li>
+          <li>Cinematic Edits With Background Music</li>
+          <li>Highlight Reels (1–3 Minutes)</li>
+          <li>Full-Length Story Film (10–30 Minutes)</li>
+          <li>Drone Shots & Slow-Motion (Available On Request)</li>
+          <li>Delivered Via Online Link Or Pen Drive</li>
+        </ul>
+      </div>
+      <div class="col-lg-5 mb-4">
+        <div class="video-wrapper portrait">
+          <video src="./assets/videos/vid1.mp4" controls class="port-vid"></video>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="container video-grid mb-5">
+    <div class="row">
+      <!-- Video 1 -->
+      <div class="col-md-6">
+        <div class="video-wrapper">
+          <video src="./assets/videos/vid2.mp4" controls></video>
+          <div class="video-text">Mridula Saravanan + Sushant Sam Varghese</div>
+        </div>
+      </div>
+      <!-- Video 2 -->
+      <div class="col-md-6">
+        <div class="video-wrapper">
+          <video src="./assets/videos/vid3.mp4" controls></video>
+          <div class="video-text">Nivedita Ganeshram + Neeraj Elangovan</div>
+        </div>
+      </div>
+      <!-- Video 3 -->
+      <div class="col-md-6">
+        <div class="video-wrapper">
+          <video src="./assets/videos/vid4.mp4" controls></video>
+          <div class="video-text">Akshaya Ilanchelian + Karthik Raja</div>
+        </div>
+      </div>
+      <!-- Video 4 -->
+      <div class="col-md-6">
+        <div class="video-wrapper">
+          <video src="./assets/videos/vid5.mp4" controls></video>
+          <div class="video-text">Vanessa Maria + Christopher Lobo</div>
+        </div>
+      </div>
+      <!-- Video 5 -->
+      <div class="col-md-6">
+        <div class="video-wrapper">
+          <video src="./assets/videos/vid6.mp4" controls></video>
+          <div class="video-text">Yamini Ravichandran + Saravana</div>
+        </div>
+      </div>
+      <!-- Video 6 -->
+      <div class="col-md-6">
+        <div class="video-wrapper">
+          <video src="./assets/videos/vid7.mp4" controls></video>
+          <div class="video-text">Krithika.K + Pradeep</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER SECTION -->
+  <footer class="footer text-white py-5">
+    <div class="container-fluid">
+      <div class="row text-center text-md-start footer-content">
+        <div class="col-md-4 mb-4 mb-md-0">
+          <img src="./assets/images/logo.png" alt="Logo" class="footer-logo mb-2">
+          <h5 class="fw-bold">PRAKAN STUDIO <br>PHOTOGRAPHY</h5>
+        </div>
+        <div class="col-md-4 mb-4 mb-md-0">
+          <h5 class="fw-bold">QUICK LINKS</h5>
+          <ul class="list-unstyled" style="font-weight: 600;">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./package.html">About Us</a></li>
+            <li><a href="./privacy.html">Privacy Policy</a></li>
+            <li><a href="./terms_conditions.html">Terms and Conditions</a></li>
+      </ul>
+        </div>
+        <div class="col-md-4">
+          <h5 class="fw-bold">CONTACT</h5>
+          <ul class="list-unstyled" style="font-weight: 600;"> 
+            <li><i class="bi bi-telephone-fill"></i> 9874653210 / 9632587410</li>
+            <li><i class="bi bi-envelope-fill"></i> mailtoprakan@studio.com</li>
+            <li><i class="bi bi-geo-alt-fill"></i> Guduvancherry, 603202</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/client.js"></script>
+    <script src="./assets/js/login.js"></script>
+    <script src="./assets/js/toggle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    </body>
+    </html>
+

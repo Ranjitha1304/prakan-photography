@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prakan Photography</title>
+
+    <!-- Favicon (logo) -->
+    <link rel="icon" type="image/png" href="./assets/images/logo.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/login.css">
+    <link rel="stylesheet" href="./assets/css/terms_conditions.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top fixed-top-custom">
+        <div class="container position-relative">
+            <!-- Logo -->
+            <a class="navbar-brand" href="./index.html">
+                <img src="./assets/images/logo.png" alt="Logo" >
+            </a>
+
+      <button class="navbar-toggler" onclick="toggleNavbar()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+
+            <!-- Centered Menu -->
+            <div class="navbar-collapse-custom justify-content-center" id="navbarContent">
+              <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./wedding.html">WEDDINGS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./kids.html">KIDS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./photography.html">PHOTOGRAPHY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./package.html">PACKAGES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contactUs.html">CONTACT US</a>
+                    </li>
+                </ul>
+                        <!-- Mobile Login Button -->
+        <div class="d-block d-lg-none mt-3 w-100 text-center">
+          <button class="btn btn-primary w-100" onclick="openModal('loginModal')">LOGIN</button>
+        </div>
+            </div>
+
+             <!-- Desktop Login Button -->
+      <div class="ms-auto d-none d-lg-block">
+        <button class="btn btn-primary login-btn" onclick="openModal('loginModal')">LOGIN</button>
+      </div>
+            </div>
+        
+    </nav>
+
+
+
+<!-- Login Modal -->
+<div id="loginModal" class="custom-modal">
+  <div class="custom-modal-content">
+    <div class="custom-modal-header">
+      <button type="button" class="close-btn" onclick="closeModal('loginModal')">&times;</button>
+    </div>
+    <h4 class="text-center fw-bold">Login into your Account</h4>
+    <form id="loginForm" class="mt-3">
+      <input type="text" id="loginEmailPhone" class="form-control mb-3" placeholder="Email or phone" required>
+      <input type="password" id="loginPassword" class="form-control mb-2" placeholder="Password" required>
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="rememberMe">
+          <label class="form-check-label" for="rememberMe">Remember me</label>
+        </div>
+        <a href="#" class="forget">Forget Password?</a>
+      </div>
+      <button type="submit" class="btn login-btn-submit w-100">Login</button>
+    </form>
+    <div class="text-center mt-3">
+      <p class="mb-0 no-account">Don't have an account?</p>
+      <span class="register-now" onclick="switchToRegister()">Register Now</span>
+    </div>
+  </div>
+</div>
+
+<!-- Register Modal -->
+<div id="registerModal" class="custom-modal">
+  <div class="custom-modal-content">
+    <div class="custom-modal-header">
+      <button type="button" class="close-btn" onclick="closeModal('registerModal')">&times;</button>
+    </div>
+    <h4 class="text-center fw-bold">Register New Account</h4>
+    <form id="registerForm" class="mt-3">
+      <input type="text" id="regName" class="form-control mb-3" placeholder="Full Name" required>
+      <input type="email" id="regEmail" class="form-control mb-3" placeholder="Email" required>
+      <input type="tel" id="regPhone" class="form-control mb-3" placeholder="Phone" required>
+      <input type="password" id="regPassword" class="form-control mb-3" placeholder="Password" required>
+      <button type="submit" class="btn login-btn-submit w-100">Register</button>
+    </form>
+  </div>
+</div>
+
+<!-- Success Message Modal -->
+<div id="successModal" class="custom-modal">
+  <div class="custom-modal-content text-center p-4">
+    <img src="https://cdn-icons-png.flaticon.com/512/845/845646.png" alt="Success" width="80" />
+    <h5 class="mt-3">Login Successful!</h5>
+  </div>
+</div>
+
+
+
+<section class="terms">
+<h3>Privacy Policy</h3>
+<h4>Terms And Conditions</h4>
+<h5>Welcome To Prakan Photo Studio!</h5>
+<p>By booking our services or using our website, you agree to the following terms and conditions. Please read them carefully before proceeding.</p>
+
+<div class="heading"> 
+    <h5>1. Booking & Confirmation</h5>
+</div>
+<ul>
+    <li>All bookings are confirmed only upon receipt of a booking fee or advance payment.</li>
+    <li>clients must provide accurate details such as date, time,venue and type of event at the time of booking.</li>
+    <li>Last-Minute Bookings are subject to availability and may incur additional charges.</li>
+</ul>
+
+<div class="heading"> 
+    <h5>2. Payment Terms</h5>
+</div>
+
+<ul>
+    <li>A Non-Refundable advance is required to confirm your session or event booking.</li>
+    <li>The remaining balance must be paid before or on the day of the Event/Shoot.</li>
+    <li>For studio shoots or printed products, full payment may be required Upfront.</li>
+    <li>Accepted payment methods: Cash, UPI, Bank transfer, or any other modes accepted by our studio.</li>
+
+</ul>
+
+<div class="heading"> 
+    <h5>3. Cancellations & Resheduling</h5>
+</div>
+<ul>
+    <li>Cancellations made more than 7 days before the shoot will be eligible for resheduling (Subject to availability).</li>
+    <li>Cancellations made within 7 days of the shoot are Non-Refundable.</li>
+    <li>Resheduling requests must be made at least 48 hours in advance.</li>
+
+</ul>
+
+<div class="heading"> 
+    <h5>4. Client Responsibilities</h5>
+</div>
+<ul>
+    <li>Please arrive on time for studio or outdoor shoots. Delays may result in reduced session time.</li>
+    <li>Inform us in advance of any specific concepts, poses, or photo requests.</li>
+    <li>Clients are responsible for obtaining location permissions. If needed (E.g., Wedding halls, outdoor locations.)</li>
+</ul>
+
+<div class="heading"> 
+    <h5>5. Copyright & Image Use</h5>
+</div>
+
+    <ul>
+        <li>Prakan photo studio retains the copyright of all photos and videos taken.</li>
+        <li>clients receive High-Resolution, edited images for personal use.</li>
+        <li>Photos may be used by prakan photo studio for portfolio, website, and promotional purposes with your prior consent.</li>
+        <li>Unauthorized editing, resale, or commercial use of our images without written permission is not allowed.</li>
+    </ul>
+
+    <div class="heading"> 
+        <h5>6. Delivery Timeline</h5>
+    </div>
+    <ul>
+        <li>Edited photos will bed delivered within 7-15 working days after the Shoot/Event, depending on the project.</li>
+        <li>Printrd Albums, if included, May take additional time and will be communicated during booking.</li>
+
+    </ul>
+<div class="heading"> 
+    <h5>7. Limitation Of Liability</h5>
+</div>
+<ul>
+    <li>While we strive for perfection, we are not liable for unforeseen circumstances such as weather issues, Equipment failure, or late arrivals that affect the shoot.</li>
+    <li>In the rare event of total equipment failure or loss of images, liability os limited to the return of all fees paid.</li>
+</ul>
+
+<div class="heading"> 
+    <h5>8. Changes To Terms</h5>
+</div>
+<p>We reserve the right to update these terms at any time. Continued use of our services implies acceptance of the revised terms.</p>
+
+</section>
+
+
+  <!-- FOOTER SECTION -->
+  <footer class="footer text-white py-5">
+    <div class="container-fluid">
+      <div class="row text-center text-md-start footer-content">
+        <div class="col-md-4 mb-4 mb-md-0">
+          <img src="./assets/images/logo.png" alt="Logo" class="footer-logo mb-2">
+          <h5 class="fw-bold">PRAKAN STUDIO <br>PHOTOGRAPHY</h5>
+        </div>
+        <div class="col-md-4 mb-4 mb-md-0">
+          <h5 class="fw-bold">QUICK LINKS</h5>
+          <ul class="list-unstyled" style="font-weight: 600;">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./package.html">About Us</a></li>
+            <li><a href="./privacy.html">Privacy Policy</a></li>
+            <li><a href="./terms_conditions.html">Terms and Conditions</a></li>
+      </ul>
+        </div>
+        <div class="col-md-4">
+          <h5 class="fw-bold">CONTACT</h5>
+          <ul class="list-unstyled" style="font-weight: 600;"> 
+            <li><i class="bi bi-telephone-fill"></i> 9874653210 / 9632587410</li>
+            <li><i class="bi bi-envelope-fill"></i> mailtoprakan@studio.com</li>
+            <li><i class="bi bi-geo-alt-fill"></i> Guduvancherry, 603202</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/client.js"></script>
+    <script src="./assets/js/login.js"></script>
+    <script src="./assets/js/toggle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+</body>
+</html>
