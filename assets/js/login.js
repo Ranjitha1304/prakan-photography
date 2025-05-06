@@ -1,4 +1,3 @@
-
 // Modal control functions
 function openModal(modalId) {
   document.getElementById(modalId).style.display = 'flex';
@@ -8,7 +7,7 @@ function openModal(modalId) {
 function closeModal(modalId) {
   document.getElementById(modalId).style.display = 'none';
   document.body.style.overflow = '';
-    
+
   // Reset the form when closing
   if (modalId === 'loginModal') {
     document.getElementById('loginForm').reset();
@@ -16,7 +15,6 @@ function closeModal(modalId) {
     document.getElementById('registerForm').reset();
   }
 }
-
 
 function switchToRegister() {
   document.getElementById('loginForm').reset();
@@ -28,19 +26,21 @@ function showSuccessMessage(message) {
   const successModal = document.getElementById('successModal');
   successModal.querySelector('h5').textContent = message;
   openModal('successModal');
-  
+
   setTimeout(() => {
     closeModal('successModal');
 
-        // Also reset forms when success message closes (extra safety)
+    // Also reset forms when success message closes (extra safety)
     document.getElementById('loginForm').reset();
     document.getElementById('registerForm').reset();
   }, 1000);
 }
 
-// Update your login button to use the new modal system
-document.querySelector('.login-btn').addEventListener('click', function() {
-  openModal('loginModal');
+// Open login modal
+document.querySelectorAll('.login-btn').forEach(btn => {
+  btn.addEventListener('click', function () {
+    openModal('loginModal');
+  });
 });
 
 // LOGIN FORM SUBMIT
@@ -56,6 +56,18 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     alert("Please enter a valid Email or 10-digit Phone and Password (min 4 characters)");
     return;
   }
+
+  // ✅ Hide all login buttons (desktop/mobile)
+  document.querySelectorAll('.login-btn').forEach(btn => btn.classList.add('d-none'));
+
+  // ✅ Show logout section
+  const logoutSection = document.querySelector('.logout-section');
+  const userCircle = logoutSection.querySelector('.user-circle');
+  logoutSection.classList.remove('d-none');
+
+  // ✅ Set user initial
+  const initial = emailPhone.charAt(0).toUpperCase();
+  userCircle.textContent = initial;
 
   closeModal('loginModal');
   showSuccessMessage("Login Successful!");
@@ -80,5 +92,15 @@ document.getElementById("registerForm").addEventListener("submit", function (e) 
   closeModal('registerModal');
   showSuccessMessage("Registration Successful!");
 });
+
+// LOGOUT
+document.querySelector('.logout-section').addEventListener('click', function () {
+  document.querySelector('.logout-section').classList.add('d-none');
+  document.querySelectorAll('.login-btn').forEach(btn => btn.classList.remove('d-none'));
+  alert("Logged out successfully!");
+});
+
+
+
 
 
