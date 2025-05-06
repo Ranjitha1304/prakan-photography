@@ -16,7 +16,7 @@ const testimonials = [
     },
     {
       name: 'Meera & Arjun',
-      img: '/assets/images/client1.png',
+      img: '/assets/images/client3.png',
       msg: 'Prakan team truly made our day special with stunning photos and amazing support!'
     },
     {
