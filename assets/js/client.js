@@ -1,12 +1,12 @@
 const testimonials = [
     {
       name: 'Anjali & Karthik',
-      img: '/assets/images/client1.png',
+      img: './assets/images/client1.png',
       msg: 'Absolutely loved our photos! The team at Prakan Photo Studio captured our special day perfectly. '
     },
     {
       name: 'Suresh M.',
-      img: '/assets/images/client2.png',
+      img: '../images/client2.png',
       msg: 'Professional, friendly, and creative! I Had a Portrait Session And The Results Were Beyond Expectations. '
     },
     {
